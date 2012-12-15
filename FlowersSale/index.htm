@@ -2,14 +2,10 @@
 <html>
     <head>
         <title>Flowers</title>
-		<meta charset=utf-8>
+				<meta charset=utf-8 />
+				<script data-main="require-config" src="js/require.js" type="text/javascript"></script>
         <link href="css/style.css" rel="stylesheet" type="text/css" />
         <link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
-				<script src="js/jquery-1.8.0.js" type="text/javascript"></script>
-				<script src="js/lodash.js" type="text/javascript"></script>
-				<script src="js/backbone.js" type="text/javascript"></script>
-        <script src="js/jquery.easing.1.3.js" type="text/javascript"></script>
-        <script src="js/base.js" type="text/javascript"></script>
     </head>
     <body>
 		<div id="ac_background" class="ac_background">
@@ -21,12 +17,12 @@
 			<h1><span>Цветы</span>от Лео</h1>
 			<div class="ac_menu">
 				<ul>
-					<li>
+					<li class="tulips">
 						<a href="images/tulips_bg.jpg">Тюльпаны</a>
 						<div class="ac_subitem">
 							<span class="ac_close"></span>
-							<h2>Appetizers</h2>
-							<ul>
+							<h2>Тюльпаны</h2>
+							<ul class="flowers-list">
 								<li>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</li>
 								<li>Lobster Bisque</li>
 								<li>Smoked Salmon Terrine</li>
@@ -38,29 +34,20 @@
 							</ul>
 						</div>
 					</li>
-					<li>
+					<li class="roses">
 						<a href="images/roses_bg.jpg">Розы</a>
 						<div class="ac_subitem">
 							<span class="ac_close"></span>
-							<h2>Main Course</h2>
-							<ul>
-								<li>Drops of rain could be heard hitting the pane, which made him feel quite sad.</li>
-								<li>Wild Sea Bass Filet</li>
-								<li>Linguini and Clams</li>
-								<li>Shrimp and Crabmeat Alfredo</li>
-								<li>Broiled Stuffed Flounder </li>
-								<li>Mussels Marinara</li>
-								<li>Grilled Mooloolaba Giant king prawns</li>
-								<li>Lobster Mornay</li>
-								<li>Fresh Shrimp Tart</li>
+							<h2>Розы</h2>
+							<ul class="flowers-list">
 							</ul>
 						</div>
 					</li>
-					<li>
+					<li class="orchids">
 						<a href="images/orchids_bg.jpg">Орхидеи</a>
 						<div class="ac_subitem">
 							<span class="ac_close"></span>
-							<h2>Specials</h2>
+							<h2>Орхидеи</h2>
 							<ul>
 								<li>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</li>
 								<li>Ratatouille</li>
@@ -78,7 +65,7 @@
 						<div class="ac_subitem">
 							<span class="ac_close"></span>
 							<h2>Desserts</h2>
-							<ul>
+							<ul class="flowers-list">
 								<li>It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</li>
 								<li>New England Apple Crisp</li>
 								<li>Southern Pecan Pie</li>

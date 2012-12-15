@@ -51,6 +51,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\app.js" />
     <Content Include="app\models\flower-preview.js" />
     <Content Include="app\templates\basket.htm" />
     <Content Include="app\models\basket.js" />
@@ -58,6 +59,7 @@
     <Content Include="app\views\basket.js" />
     <Content Include="app\views\flower-preview.js" />
     <Content Include="css\style.css" />
+    <Content Include="flowers-base.js" />
     <Content Include="images\bg_menu.png" />
     <Content Include="images\close.png" />
     <Content Include="images\Default.jpg" />
@@ -72,6 +74,8 @@
     <Content Include="js\jquery-1.8.0.js" />
     <Content Include="js\jquery.easing.1.3.js" />
     <Content Include="js\lodash.js" />
+    <Content Include="js\require.js" />
+    <Content Include="require-config.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
