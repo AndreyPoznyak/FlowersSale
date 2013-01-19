@@ -1,0 +1,76 @@
+﻿/*basket*/
+
+.basket-content
+{
+}
+
+/*flower-preview*/
+
+.flower-preview-content
+{
+	display: none;
+	position: relative;
+	width: 700px;
+	height: 500px;
+	margin-top: 50px;
+	margin-left: auto;
+	margin-right: auto;
+	z-index: 1000;
+	overflow: hidden;
+	background-color: white;
+}
+
+/**/
+.dark-mask
+{
+	position: absolute;
+	display: none;
+	top: 0px;
+	left: 0px;
+	height: 100%;
+	width: 100%;
+	background: black;
+	opacity: 0.7;
+	z-index: 100;
+}
+
+.flowers-list li
+{
+	cursor: pointer;
+}
+
+span.ac_close_black
+{
+	float: right;
+	margin: 10px;
+	width: 11px;
+	height: 12px;
+	cursor: pointer;
+	background: transparent url(../images/close_black.png) no-repeat top left;
+	opacity: 0.4;
+}
+
+span.ac_close_black:hover
+{
+	opacity: 1.0;
+}
+
+.flower-preview-image
+{
+	height: 300px;
+	width: 360px;
+	margin-left: 15px;
+	margin-top: 15px;
+	float: left;
+	display: block;
+	background-repeat: no-repeat;
+	background-color: transparent;
+}
+
+.flower-preview-title
+{
+	float: left;
+	font-size:36px;
+	margin-left: 20px;
+	margin-top: 10px;
+}

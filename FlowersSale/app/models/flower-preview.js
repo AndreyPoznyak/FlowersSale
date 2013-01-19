@@ -2,11 +2,12 @@
 	function (Backbone) {
 			var FlowerPreviewModel = Backbone.Model.extend({
 					defaults: {
-						flowerName: "",
-						opened: true
+							flowerName: "",
+							flowerType: "",
+							opened: false
 					},
 					initialize: function () {
-							console.log("preview model init");
+							//console.log("preview model init");
 					}
 			});
 			return FlowerPreviewModel;
