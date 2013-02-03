@@ -1,88 +1,117 @@
 ﻿<!DOCTYPE html>
 <html>
-    <head>
-        <title>Flowers</title>
-				<meta charset=utf-8 />
-				<link rel="icon" type="image/x-icon" href="images/favicon.ico" />
-				<script data-main="require-config" src="js/require.js" type="text/javascript"></script>
-        <link href="css/style.css" rel="stylesheet" type="text/css" />
-				<link href="css/app.css" rel="stylesheet" type="text/css" />
-        <link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
-    </head>
-    <body>
+<head>
+		<title>Flowers</title>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+		<script data-main="require-config" src="js/require.js" type="text/javascript"></script>
+		<link href="css/style.css" rel="stylesheet" type="text/css" />
+		<link href="css/app.css" rel="stylesheet" type="text/css" />
+		<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&subset=latin,cyrillic'
+				rel='stylesheet' type='text/css'>
+		<!--templates go here:-->
+		<script type="text/template" id="flower-preview-template">
+				<span class="ac_close_black"></span>
+				<div class="flower-preview-image"></div>
+				<span class="flower-preview-title"></span>
+				<span class="flower-preview-price"></span>
+				<span class="flower-preview-description"></span>
+				<div class="flower-preview-selects-box">
+				<select class="flower-preview-color-select"></select>
+				<select class="flower-preview-length-select"></select>
+				<div class="flower-preview-quantity">
+				<span class="flower-preview-quantity-label">Количество:</span>
+				<select class="flower-preview-quantity-select"></select>
+				</div>
+				</div>
+				<div class="flower-preview-add-to-basket-button">
+				<span>
+				добавить в корзину
+				</span>
+				</div>
+		</script>
+				<script type="text/template" id="basket-template">
+				<span class="ac_close_black"></span>
+				</div>
+		</script>
+</head>
+<body>
 		<div id="ac_background" class="ac_background">
-			<img class="ac_bgimage" src="images/Default.jpg" alt="Background"/>
-			<div class="ac_overlay"></div>
-			<div class="ac_loading"></div>
+				<img class="ac_bgimage" src="images/Default.jpg" alt="Background" />
+				<div class="ac_overlay">
+				</div>
+				<div class="ac_loading">
+				</div>
 		</div>
 		<div id="ac_content" class="ac_content">
-			<h1><span>Цветы</span>от Лео</h1>
-			<div class="ac_menu">
-				<ul>
-					<li class="tulips">
-						<a href="images/tulips_bg.jpg">Тюльпаны</a>
-						<div class="ac_subitem">
-							<span class="ac_close"></span>
-							<h2>Тюльпаны</h2>
-							<ul class="flowers-list">
-								<li>Очень хорошие тюльпаны</li>
-								<li>Lobster Bisque</li>
-								<li>Smoked Salmon Terrine</li>
-								<li>Tuna Ceviche</li>
-								<li>Wild Mushroom Flan</li>
-								<li>Almond Bruschetta</li>
-								<li>Green Chilli Canapee</li>
-								<li>Artichoke Rucula Salad</li>
-							</ul>
-						</div>
-					</li>
-					<li class="roses">
-						<a href="images/roses_bg.jpg">Розы</a>
-						<div class="ac_subitem">
-							<span class="ac_close"></span>
-							<h2>Розы</h2>
-							<ul class="flowers-list">
-							<li>Очень хорошие розы</li>
-							</ul>
-						</div>
-					</li>
-					<li class="orchids">
-						<a href="images/orchids_bg.jpg">Орхидеи</a>
-						<div class="ac_subitem">
-							<span class="ac_close"></span>
-							<h2>Орхидеи</h2>
-							<ul>
-								<li>Очень хорошие орхидеи</li>
-								<li>Ratatouille</li>
-								<li>Le Tourin</li>
-								<li>Wild Salmon Bruschetta</li>
-								<li>Sweet Mustard Gratin</li>
-								<li>Homemade Pizza Mediteranica</li>
-								<li>Spanakopita Speciale</li>
-								<li>Ricotta Spinach Cannelloni</li>
-							</ul>
-						</div>
-					</li>
-					<li>
-						<a href="images/Default.jpg">Информация</a>
-						<div class="ac_subitem">
-							<span class="ac_close"></span>
-							<h2>Информация</h2>
-							<ul class="flowers-list">
-								<li>Где нас найти и т.д.</li>
-								<li>Карта</li>
-								<li>Контакты</li>
-							</ul>
-						</div>
-					</li>
-				</ul>
-			</div>
+				<h1>
+						<span>Цветы</span>от Лео</h1>
+				<div class="ac_menu">
+						<ul>
+								<li class="tulips"><a href="images/tulips_bg.jpg">Тюльпаны</a>
+										<div class="ac_subitem">
+												<span class="ac_close"></span>
+												<h2>
+														Тюльпаны</h2>
+												<ul class="flowers-list">
+														<li>Очень хорошие тюльпаны</li>
+														<li>Lobster Bisque</li>
+														<li>Smoked Salmon Terrine</li>
+														<li>Tuna Ceviche</li>
+														<li>Wild Mushroom Flan</li>
+														<li>Almond Bruschetta</li>
+														<li>Green Chilli Canapee</li>
+														<li>Artichoke Rucula Salad</li>
+												</ul>
+										</div>
+								</li>
+								<li class="roses"><a href="images/roses_bg.jpg">Розы</a>
+										<div class="ac_subitem">
+												<span class="ac_close"></span>
+												<h2>
+														Розы</h2>
+												<ul class="flowers-list">
+														<li>Очень хорошие розы</li>
+												</ul>
+										</div>
+								</li>
+								<li class="orchids"><a href="images/orchids_bg.jpg">Орхидеи</a>
+										<div class="ac_subitem">
+												<span class="ac_close"></span>
+												<h2>
+														Орхидеи</h2>
+												<ul>
+														<li>Очень хорошие орхидеи</li>
+														<li>Ratatouille</li>
+														<li>Le Tourin</li>
+														<li>Wild Salmon Bruschetta</li>
+														<li>Sweet Mustard Gratin</li>
+														<li>Homemade Pizza Mediteranica</li>
+														<li>Spanakopita Speciale</li>
+														<li>Ricotta Spinach Cannelloni</li>
+												</ul>
+										</div>
+								</li>
+								<li><a href="images/Default.jpg">Информация</a>
+										<div class="ac_subitem">
+												<span class="ac_close"></span>
+												<h2>
+														Информация</h2>
+												<ul class="flowers-list">
+														<li>Где нас найти и т.д.</li>
+														<li>Карта</li>
+														<li>Контакты</li>
+												</ul>
+										</div>
+								</li>
+						</ul>
+				</div>
 		</div>
 		<div class="dark-mask">
 		</div>
-				<div class="flower-preview-content">
+		<div class="flower-preview-content">
 		</div>
 		<div class="basket-content">
 		</div>
-    </body>
+</body>
 </html>

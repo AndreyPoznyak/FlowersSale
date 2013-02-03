@@ -30,6 +30,7 @@
 						click: function (event) {
 								previewModel.set({
 										flowerName: rose.name,
+										flowerInfo: rose,
 										flowerType: $(event.currentTarget).parent().parent().parent().attr("class"),
 										opened: true
 								});

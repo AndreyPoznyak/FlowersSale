@@ -1,11 +1,16 @@
-﻿define(["backbone"],
+﻿define([
+		"backbone",
+],
 	function (Backbone) {
-		var BaksetModel = Backbone.Model.extend({
-				defaults: {
-				},
-				initialize: function () {
-						console.log("basket model init");
-				}
-		});
-		return BaksetModel;
-});
+			var BaksetModel = Backbone.Model.extend({
+					defaults: {
+							opened: false,
+							ordersCollection: null
+					},
+					initialize: function () {
+							var coll = Backbone.Collection.extend({
+							});
+					}
+			});
+			return BaksetModel;
+	});
