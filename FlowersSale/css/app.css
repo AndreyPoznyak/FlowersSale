@@ -1,10 +1,4 @@
-﻿/*basket*/
-
-.basket-content
-{
-}
-
-/*flower-preview*/
+﻿/*flower-preview*/
 
 .flower-preview-content
 {
@@ -170,3 +164,62 @@ span.ac_close_black:hover
 	font-weight: 400;
 	font-size: 13px;
 }
+
+/* #region basket*/
+
+.basket-open-button
+{
+	cursor: pointer;
+	position: fixed;
+	padding-top: 9px;
+	left: 0px;
+	bottom: 0px;
+	width: 130px;
+	height: 31px;
+	background-color: #000;
+}
+
+.basket-open-button:hover
+{
+	padding-top: 11px;
+	width: 132px;
+}
+
+.basket-open-label
+{
+	display: block;
+	margin-left: 28px;
+	font-size: 18px;
+	font-weight: normal;
+	text-transform: uppercase;
+	color: White;
+}
+
+.basket-content
+{
+	display: none;
+	position: relative;
+	width: 700px;
+	height: 500px;
+	margin-top: 50px;
+	margin-left: auto;
+	margin-right: auto;
+	z-index: 1000;
+	overflow: hidden;
+	background-color: white;
+	text-transform: none;
+}
+
+.basket-title
+{
+}
+
+.basket-table-header
+{
+}
+
+.basket-table-header th span
+{
+}
+
+/* #endregion basket*/

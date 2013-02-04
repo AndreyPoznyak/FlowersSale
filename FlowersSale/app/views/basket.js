@@ -9,6 +9,7 @@
 					},
 
 					initialize: function () {
+							var view = this;
 							view.listenTo(view.model, "change:opened", function (event, opened) {
 									if (opened === true) {
 											view.$el.show();
@@ -18,9 +19,12 @@
 											$(".dark-mask").hide();
 									}
 							});
+
+							view.render();
 					},
 
 					render: function () {
+							var view = this;
 							view.$el.html(view.template.html());
 					},
 

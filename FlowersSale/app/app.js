@@ -22,6 +22,15 @@
 						el: $(".flower-preview-content")
 				});
 
+		$(".basket-open-button").bind({
+				click: function () {
+						userBasketModel.set({
+								opened: true
+						});
+				} 
+		});
+
+		//filling menus for flowers item calling
 		var $rosesList = $(".roses").children(".ac_subitem").children(".flowers-list");
 		_.each(Flowers.roses, function (rose) {
 				$rosesList.append($("<li></li>", {
