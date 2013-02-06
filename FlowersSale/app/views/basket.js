@@ -1,7 +1,7 @@
 ﻿define( [
 		"backbone",
-		"app/views/basket-item",
-		"js/jquery.tinyscrollbar.min"
+		"app/views/basket-item"//,
+		//"js/jquery.tinyscrollbar.min"
 ],
 	function ( Backbone, BasketItemView ) {
 			var BasketView = Backbone.View.extend( {
@@ -53,8 +53,8 @@
 					},
 
 					close: function () {
-							this.$el.find( ".basket-long-content" ).tinyscrollbar();
-							//this.model.set( "opened", false );
+							//this.$el.find( ".basket-long-content" ).tinyscrollbar();
+							this.model.set( "opened", false );
 					}
 			} );
 

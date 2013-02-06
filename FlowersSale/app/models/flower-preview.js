@@ -7,7 +7,6 @@
 							opened: false
 					},
 					initialize: function () {
-							//console.log("preview model init");
 					}
 			});
 			return FlowerPreviewModel;

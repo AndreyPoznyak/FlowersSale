@@ -327,6 +327,8 @@ span.ac_close_black:hover
 .basket-long-content
 {
 	float: left;
+	display: block;
+	overflow: auto;
 	height: 445px;
 	width: 100%;
 }

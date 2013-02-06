@@ -85,8 +85,9 @@
 							view.model.trigger("addItemToBasket", {
 									quantity: view.$el.find(".flower-preview-quantity-select").val(),
 									color: view.$el.find(".flower-preview-color-select").val(),
-									length: view.$el.find(".flower-preview-length-select").val(),
+									length: view.$el.find(".flower-preview-length-select").val()
 							});
+							view.close();
 					},
 
 					close: function () {
