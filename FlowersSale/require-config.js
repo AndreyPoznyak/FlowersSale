@@ -20,6 +20,7 @@
 				},
 				"js/jquery.easing.1.3": ["jquery"],
 				"js/base": ["jquery", "js/jquery.easing.1.3"],
+				"js/jquery.tinyscrollbar.min": ["jquery"],
 
 				flowersList: {
 						exports: "flowersList"

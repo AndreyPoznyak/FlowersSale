@@ -6,6 +6,7 @@
 							type: "",
 							quantity: "",
 							color: "",
+							price: 0,
 							length: 0
 					},
 

@@ -22,12 +22,20 @@
 						el: $(".flower-preview-content")
 				});
 
+		previewModel.on("addItemToBasket", function (info) {
+				userBasketModel.addOrder($.extend(info, {
+						name: previewModel.get("flowerName"),
+						type: previewModel.get("flowerType"),
+						price: previewModel.get("flowerInfo").price
+				}));
+		});
+
 		$(".basket-open-button").bind({
 				click: function () {
 						userBasketModel.set({
 								opened: true
 						});
-				} 
+				}
 		});
 
 		//filling menus for flowers item calling

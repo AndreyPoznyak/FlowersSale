@@ -12,11 +12,11 @@
 
 							view.listenTo(view.model, "change:opened", function (event, opened) {
 									if (opened === true) {
-											view.$el.show();
-											$(".dark-mask").show();
+											view.$el.fadeIn();
+											$(".dark-mask").fadeIn();
 									} else {
-											view.$el.hide();
-											$(".dark-mask").hide();
+											view.$el.fadeOut();
+											$(".dark-mask").fadeOut();
 									}
 							});
 
@@ -85,7 +85,7 @@
 							view.model.trigger("addItemToBasket", {
 									quantity: view.$el.find(".flower-preview-quantity-select").val(),
 									color: view.$el.find(".flower-preview-color-select").val(),
-									length: view.$el.find(".flower-preview-length-select").val()
+									length: view.$el.find(".flower-preview-length-select").val(),
 							});
 					},
 

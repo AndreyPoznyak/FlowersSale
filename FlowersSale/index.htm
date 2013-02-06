@@ -7,6 +7,7 @@
 		<script data-main="require-config" src="js/require.js" type="text/javascript"></script>
 		<link href="css/style.css" rel="stylesheet" type="text/css" />
 		<link href="css/app.css" rel="stylesheet" type="text/css" />
+		<link href="css/tinyscrollbar.css" rel="stylesheet" type="text/css" />
 		<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&subset=latin,cyrillic'
 				rel='stylesheet' type='text/css'>
 		<!--templates go here:-->
@@ -33,7 +34,9 @@
 				<script type="text/template" id="basket-template">
 				<span class="ac_close_black"></span>
 				<span class="basket-title">Корзина</span>
-				<table class="basket-items-table">
+				<div class="basket-long-content">
+				<div class="viewport">
+				<table class="basket-items-table overview">
 				<thead><tr class="basket-table-header">
 				<th><span>Наименование</span></th>
 				<th><span>Характеристики</span></th>
@@ -42,7 +45,40 @@
 				<tbody class="basket-items-table-body">
 				</tbody>
 				</table>
+				<div class="scollbar">
+				<div class="track">
+				<div class="thumb">
 				</div>
+				</div></div>
+				</div>
+				</div>
+				</div>
+		</script>
+						<script type="text/template" id="basket-item-template">
+						<td class="basket-item-description">
+						<div class="basket-item-box">
+						<div class="basket-item-small-image">
+						</div>
+						<span class="basket-item-title"></span>
+						<span class="basket-item-remove-label">Удалить</span>
+						</div>
+						</td>
+						<td class="basket-item-options">
+						<div class="basket-item-box">
+						<table>
+						<tbody class="basket-options-table">
+						<tr><td>Цвет:</td><td class="bakset-item-color-label"></td></tr>
+						<tr><td>Длина стебля:</td><td class="bakset-item-length-label"></td></tr>
+						<tr><td>Количество:</td><td class="bakset-item-quantity-label"></td></tr>
+						</tbody>
+						</table>
+						</div>
+						</td>
+						<td class="basket-item-price">
+						<div class="basket-item-box">
+						<span class="bakset-item-price-label"></span>
+						</div>
+						</td>
 		</script>
 </head>
 <body>
