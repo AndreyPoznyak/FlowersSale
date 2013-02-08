@@ -25,18 +25,15 @@
 				<select class="flower-preview-quantity-select"></select>
 				</div>
 				</div>
-				<div class="flower-preview-add-to-basket-button">
-				<span>
-				добавить в корзину
-				</span>
+				<div class="flower-preview-add-to-basket-button orange-button">
+				<span>добавить в корзину</span>
 				</div>
 		</script>
 				<script type="text/template" id="basket-template">
 				<span class="ac_close_black"></span>
 				<span class="basket-title">Корзина</span>
 				<div class="basket-long-content">
-				<div class="viewport">
-				<table class="basket-items-table overview">
+				<table class="basket-items-table">
 				<thead><tr class="basket-table-header">
 				<th><span>Наименование</span></th>
 				<th><span>Характеристики</span></th>
@@ -45,14 +42,12 @@
 				<tbody class="basket-items-table-body">
 				</tbody>
 				</table>
-				<div class="scollbar">
-				<div class="track">
-				<div class="thumb">
-				<div class="end"></div>
 				</div>
-				</div></div>
+				<div class="basket-footer">
+				<div class="basket-checkout-button orange-button">
+				<span>оформить заказ</span>
 				</div>
-				</div>
+				<span class="basket-total-price"></span>
 				</div>
 		</script>
 						<script type="text/template" id="basket-item-template">
@@ -153,6 +148,9 @@
 								</li>
 						</ul>
 				</div>
+		</div>
+		<div class="basket-empty-pop-up">
+		<span class="basket-empty-label">Корзина пуста.</span>
 		</div>
 		<div class="basket-open-button">
 		<span class="basket-open-label">

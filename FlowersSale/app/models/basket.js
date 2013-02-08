@@ -7,7 +7,8 @@
 					defaults: {
 							opened: false,
 							ordersCollection: null,
-							ordersCount: 0
+							ordersCount: 0,
+							totalPrice: 0
 					},
 
 					initialize: function () {
@@ -23,7 +24,9 @@
 
 					addOrder: function (order) {
 							var model = this,
-								ordersCount = model.get("ordersCount");
+								ordersCount = model.get("ordersCount"),
+								totalPrice = model.get("totalPrice");
+
 							ordersCount++;
 
 							var newOrder = new FlowerOrder({
@@ -33,15 +36,29 @@
 									quantity: order.quantity,
 									color: order.color,
 									length: order.length,
-									price: order.price
+									price: parseInt(order.price)
 							});
-							model.get("ordersCollection").add(newOrder);
+
+							totalPrice += parseInt(order.price) * order.quantity;
 							newOrder.on("removeItem", function () {
+									totalPrice -= newOrder.get("price") * newOrder.get("quantity");
+									ordersCount--;
 									model.get("ordersCollection").remove(newOrder.id);
+									model.set({
+											ordersCount: ordersCount,
+											totalPrice: totalPrice
+									});
+									if (ordersCount === 0) {
+											model.set({
+													opened: false
+											});
+									}
 							});
 							model.set({
-									ordersCount: ordersCount
+									ordersCount: ordersCount,
+									totalPrice: totalPrice
 							});
+							model.get("ordersCollection").add(newOrder);
 					}
 			});
 			return BaksetModel;

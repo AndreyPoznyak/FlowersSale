@@ -32,9 +32,13 @@
 
 		$(".basket-open-button").bind({
 				click: function () {
-						userBasketModel.set({
-								opened: true
-						});
+						if (userBasketModel.get("ordersCount") === 0) {
+								$(".basket-empty-pop-up").show().fadeOut(5000);
+						} else {
+								userBasketModel.set({
+										opened: true
+								});
+						}
 				}
 		});
 

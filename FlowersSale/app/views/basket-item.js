@@ -26,7 +26,7 @@
 							view.$el.find(".bakset-item-color-label").text(model.get("color"));
 							view.$el.find(".bakset-item-length-label").text(model.get("length"));
 							view.$el.find(".bakset-item-quantity-label").text(model.get("quantity"));
-							view.$el.find(".bakset-item-price-label").text(model.get("quantity") * parseInt(model.get("price")));
+							view.$el.find(".bakset-item-price-label").text(model.get("quantity") * model.get("price"));
 					},
 
 					onRemoveItemClick: function () {
