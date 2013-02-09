@@ -16,9 +16,14 @@
 				<div class="flower-preview-image"></div>
 				<span class="flower-preview-title"></span>
 				<span class="flower-preview-price"></span>
-				<span class="flower-preview-description"></span>
+				<span class="flower-preview-diameter flower-preview-info"></span>
+				<span class="flower-preview-lifespan flower-preview-info"></span>
+				<span class="flower-preview-petals flower-preview-info"></span>
+				<span class="flower-preview-description flower-preview-info"></span>
 				<div class="flower-preview-selects-box">
+				<span>Цвет:</span>
 				<select class="flower-preview-color-select"></select>
+				<span>Длина стебля:</span>
 				<select class="flower-preview-length-select"></select>
 				<div class="flower-preview-quantity">
 				<span class="flower-preview-quantity-label">Количество:</span>
@@ -28,6 +33,8 @@
 				<div class="flower-preview-add-to-basket-button orange-button">
 				<span>добавить в корзину</span>
 				</div>
+										<div class="order-added-to-basket">
+		<span>Товар успешно добавлен в корзину.</span></div>
 		</script>
 				<script type="text/template" id="basket-template">
 				<span class="ac_close_black"></span>
@@ -50,31 +57,31 @@
 				<span class="basket-total-price"></span>
 				</div>
 		</script>
-						<script type="text/template" id="basket-item-template">
-						<td class="basket-item-description">
-						<div class="basket-item-box">
-						<div class="basket-item-small-image">
-						</div>
-						<span class="basket-item-title"></span>
-						<span class="basket-item-remove-label">Удалить</span>
-						</div>
-						</td>
-						<td class="basket-item-options">
-						<div class="basket-item-box">
-						<table>
-						<tbody class="basket-options-table">
-						<tr><td>Цвет:</td><td class="bakset-item-color-label"></td></tr>
-						<tr><td>Длина стебля:</td><td class="bakset-item-length-label"></td></tr>
-						<tr><td>Количество:</td><td class="bakset-item-quantity-label"></td></tr>
-						</tbody>
-						</table>
-						</div>
-						</td>
-						<td class="basket-item-price">
-						<div class="basket-item-box">
-						<span class="bakset-item-price-label"></span>
-						</div>
-						</td>
+				<script type="text/template" id="basket-item-template">
+				<td class="basket-item-description">
+				<div class="basket-item-box">
+				<div class="basket-item-small-image">
+				</div>
+				<span class="basket-item-title"></span>
+				<span class="basket-item-remove-label">Удалить</span>
+				</div>
+				</td>
+				<td class="basket-item-options">
+				<div class="basket-item-box">
+				<table>
+				<tbody class="basket-options-table">
+				<tr><td>Цвет:</td><td class="bakset-item-color-label"></td></tr>
+				<tr><td>Длина стебля:</td><td class="bakset-item-length-label"></td></tr>
+				<tr><td>Количество:</td><td class="bakset-item-quantity-label"></td></tr>
+				</tbody>
+				</table>
+				</div>
+				</td>
+				<td class="basket-item-price">
+				<div class="basket-item-box">
+				<span class="bakset-item-price-label"></span>
+				</div>
+				</td>
 		</script>
 </head>
 <body>
@@ -87,8 +94,9 @@
 		</div>
 		<div id="ac_content" class="ac_content">
 				<h1>
-						<span>Цветы</span>от Лео</h1>
+						<span>магазин</span>LEPESTKI</h1>
 				<div class="ac_menu">
+				<span class="tech-info">Сайт работает в тестовом режиме, заказы не принимаются.</span>
 						<ul>
 								<li class="tulips"><a href="images/tulips_bg.jpg">Тюльпаны</a>
 										<div class="ac_subitem">
@@ -97,13 +105,6 @@
 														Тюльпаны</h2>
 												<ul class="flowers-list">
 														<li>Очень хорошие тюльпаны</li>
-														<li>Lobster Bisque</li>
-														<li>Smoked Salmon Terrine</li>
-														<li>Tuna Ceviche</li>
-														<li>Wild Mushroom Flan</li>
-														<li>Almond Bruschetta</li>
-														<li>Green Chilli Canapee</li>
-														<li>Artichoke Rucula Salad</li>
 												</ul>
 										</div>
 								</li>
@@ -122,15 +123,8 @@
 												<span class="ac_close"></span>
 												<h2>
 														Орхидеи</h2>
-												<ul>
+												<ul class="flowers-list">
 														<li>Очень хорошие орхидеи</li>
-														<li>Ratatouille</li>
-														<li>Le Tourin</li>
-														<li>Wild Salmon Bruschetta</li>
-														<li>Sweet Mustard Gratin</li>
-														<li>Homemade Pizza Mediteranica</li>
-														<li>Spanakopita Speciale</li>
-														<li>Ricotta Spinach Cannelloni</li>
 												</ul>
 										</div>
 								</li>
@@ -150,7 +144,7 @@
 				</div>
 		</div>
 		<div class="basket-empty-pop-up">
-		<span class="basket-empty-label">Корзина пуста.</span>
+		<span>Корзина пуста.</span>
 		</div>
 		<div class="basket-open-button">
 		<span class="basket-open-label">

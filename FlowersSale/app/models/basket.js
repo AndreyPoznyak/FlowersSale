@@ -40,7 +40,11 @@
 							});
 
 							totalPrice += parseInt(order.price) * order.quantity;
-							newOrder.on("removeItem", function () {
+
+							model.listenTo(newOrder, "removeItem", function () {
+									var ordersCount = model.get("ordersCount"),
+												totalPrice = model.get("totalPrice");
+
 									totalPrice -= newOrder.get("price") * newOrder.get("quantity");
 									ordersCount--;
 									model.get("ordersCollection").remove(newOrder.id);
@@ -54,6 +58,7 @@
 											});
 									}
 							});
+
 							model.set({
 									ordersCount: ordersCount,
 									totalPrice: totalPrice

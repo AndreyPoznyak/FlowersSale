@@ -22,12 +22,21 @@
 
 							view.listenTo(view.model, "change:flowerName", function (event, newName) {
 									var info = view.model.get("flowerInfo");
+
+									if (view.model.get("flowerType") === "roses") {
+											view.$el.height(410);
+									} else {
+											view.$el.height(500);
+									}
 									view.$el.find(".flower-preview-title").text(newName);
 									view.$el.find(".flower-preview-image").css({
 											"background-image": "url(../images/flowers/" + view.model.get("flowerType") + "/" + newName.replace(/\s+/g, '') + ".jpg)"
 									});
-									view.$el.find(".flower-preview-price").text(info.price);
-									view.$el.find(".flower-preview-description").text(info.description);
+									if (!info.price) {
+											view.$el.find(".flower-preview-price").text("Ждем 01.03.2013");
+									} else {
+											view.$el.find(".flower-preview-price").text(info.price);
+									}
 
 									var $colorSelect = view.$el.find(".flower-preview-color-select").empty(),
 										$lengthSelect = view.$el.find(".flower-preview-length-select").empty();
@@ -60,6 +69,32 @@
 									} else {
 											$lengthSelect.removeAttr("disabled");
 									}
+
+									if (info.description) {
+											view.$el.find(".flower-preview-description").show().text(info.description);
+									} else {
+											view.$el.find(".flower-preview-description").hide();
+									}
+
+									if (info.diameter) {
+											view.$el.find(".flower-preview-diameter").show().text(info.diameter + " см");
+									} else {
+											view.$el.find(".flower-preview-diameter").hide();
+									}
+
+									if (info.lifeSpan) {
+											view.$el.find(".flower-preview-lifespan").show().text(info.lifeSpan + " дней");
+									} else {
+											view.$el.find(".flower-preview-lifespan").hide();
+									}
+
+									if (info.petals) {
+											view.$el.find(".flower-preview-petals").show().text(info.petals + " шт.");
+									} else {
+											view.$el.find(".flower-preview-petals").hide();
+									}
+
+									view.$el.find(".flower-preview-quantity-select").prop("selectedIndex", 0);
 							});
 
 							view.render();
@@ -87,7 +122,12 @@
 									color: view.$el.find(".flower-preview-color-select").val(),
 									length: view.$el.find(".flower-preview-length-select").val()
 							});
-							view.close();
+							$(".order-added-to-basket").show().fadeOut({
+									duration: 1500,
+									complete: function () {
+											view.close();
+									}
+							});
 					},
 
 					close: function () {

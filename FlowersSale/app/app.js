@@ -43,6 +43,7 @@
 		});
 
 		//filling menus for flowers item calling
+		//roses
 		var $rosesList = $(".roses").children(".ac_subitem").children(".flowers-list");
 		_.each(Flowers.roses, function (rose) {
 				$rosesList.append($("<li></li>", {
@@ -57,5 +58,37 @@
 								});
 						}
 				}));
+		});
+		//tulips
+		var $tulipsList = $(".tulips").children(".ac_subitem").children(".flowers-list");
+		_.each(Flowers.tulips, function (rose) {
+				$tulipsList.append($("<li></li>", {
+						text: rose.name
+				}).bind({
+						click: function (event) {
+								previewModel.set({
+										flowerName: rose.name,
+										flowerInfo: rose,
+										flowerType: $(event.currentTarget).parent().parent().parent().attr("class"),
+										opened: true
+								});
+						}
+				}));
+		});
+		//orchids
+		var $orchidsList = $(".orchids").children(".ac_subitem").children(".flowers-list");
+		_.each(Flowers.orchids, function (rose) {
+				$orchidsList.append($("<li></li>", {
+						text: rose.name
+				})/*.bind({
+						click: function (event) {
+								previewModel.set({
+										flowerName: rose.name,
+										flowerInfo: rose,
+										flowerType: $(event.currentTarget).parent().parent().parent().attr("class"),
+										opened: true
+								});
+						}
+				})*/);
 		});
 });

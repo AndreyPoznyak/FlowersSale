@@ -85,7 +85,7 @@ span.ac_close_black:hover
 
 .flower-preview-image
 {
-	height: 288px;
+	height: 450px;
 	width: 360px;
 	margin-left: 15px;
 	margin-top: 15px;
@@ -93,9 +93,9 @@ span.ac_close_black:hover
 	display: block;
 	background-repeat: no-repeat;
 	background-color: transparent;
-	-webkit-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 1);
+	/*-webkit-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 1);
     -moz-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 1);
-    box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 1);
+    box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 1);*/
 }
 
 .flower-preview-title
@@ -115,16 +115,6 @@ span.ac_close_black:hover
 	font-weight: 700;
 	margin: 5px 0px 0px 20px;
 	width: 270px;
-}
-
-.flower-preview-description
-{
-	float: left;
-	width: 270px;
-	margin: 5px 0px 0px 20px;
-	color: #666;
-	word-wrap: break-word;
-	font-size: 1.1em;
 }
 
 .flower-preview-selects-box
@@ -150,6 +140,7 @@ span.ac_close_black:hover
 {
 	float: left;
 	width: 180px;
+	margin-top: 3px;
 }
 
 .flower-preview-quantity-select
@@ -170,6 +161,49 @@ span.ac_close_black:hover
 	width: 180px;
 	height: 25px;
 	margin-left: 20px;
+	margin-top: 5px;
+}
+
+.flower-preview-selects-box > span
+{
+	float: left;
+	width: 270px;
+}
+
+.flower-preview-info
+{
+	display: none;
+	float: left;
+	width: 270px;
+	margin: 5px 0px 0px 20px;
+	color: #666;
+	word-wrap: break-word;
+	font-size: 1.1em;
+}
+
+.flower-preview-description
+{
+}
+
+.flower-preview-diameter::before
+{
+	content: "Диаметр бутона:";
+	color: #000;
+	margin-right: 3px;
+}
+
+.flower-preview-lifespan::before
+{
+	content: "Продолжительность жизни:";
+	color: #000;
+	margin-right: 3px;
+}
+
+.flower-preview-petals::before
+{
+	content: "Количество лепестков:";
+	color: #000;
+	margin-right: 3px;
 }
 
 /* #endregion flower-preview*/
@@ -397,12 +431,40 @@ span.ac_close_black:hover
 	border-top-color: white;
 }
 
-.basket-empty-label
+.basket-empty-pop-up span
 {
 	color: #000;
 	margin-left: 10px;
 	font-size: 19px;
 	text-transform: none;
+}
+
+.order-added-to-basket
+{
+	display: none;
+	position: relative;
+	margin: 240px auto 0px auto;
+	height: 60px;
+	width: 200px;
+	padding-top: 3px;
+	z-index: 1000;
+	background-color: #000;
+}
+
+.order-added-to-basket span
+{
+	position: absolute;
+	display: block;
+	color: #FFF;
+	margin-top: 5px;
+	margin-left: 20px;
+	font-size: 19px;
+	text-transform: none;
+}
+
+.tech-info
+{
+	margin: 10px;
 }
 
 /* #endregion basket*/

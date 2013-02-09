@@ -128,7 +128,7 @@
 					openSubMenu = function ($item, $sub_menu, el_image) {
 					    $sub_menu.stop()
 						.animate({
-						    height: '400px',
+						    height: '500px',
 						    marginTop: '-200px'
 						}, 400, function () {
 						    //the bg image changes

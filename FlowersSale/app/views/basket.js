@@ -11,7 +11,8 @@
 					basketItemsById: {},
 
 					events: {
-							"click .ac_close_black": "close"
+							"click .ac_close_black": "close",
+							"click .basket-checkout-button": "close"               //temp
 					},
 
 					initialize: function () {
