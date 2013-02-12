@@ -34,6 +34,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -88,6 +91,19 @@
     <Content Include="images\flowers\roses\PurpleCezanne.jpeg" />
     <Content Include="images\flowers\roses\PurpleHaze.jpeg" />
     <Content Include="images\flowers\roses\PurpleHaze2.JPG" />
+    <Content Include="images\flowers\tulips\aafke.jpg" />
+    <Content Include="images\flowers\tulips\ad rem.jpg" />
+    <Content Include="images\flowers\tulips\barcelona.jpg" />
+    <Content Include="images\flowers\tulips\cheers.jpg" />
+    <Content Include="images\flowers\tulips\denmark.jpg" />
+    <Content Include="images\flowers\tulips\dynasty.jpg" />
+    <Content Include="images\flowers\tulips\leen van de mark.jpg" />
+    <Content Include="images\flowers\tulips\Match.jpg" />
+    <Content Include="images\flowers\tulips\oscar.jpg" />
+    <Content Include="images\flowers\tulips\pako.jpg" />
+    <Content Include="images\flowers\tulips\Purple Prince.jpg" />
+    <Content Include="images\flowers\tulips\Strong gold.jpg" />
+    <Content Include="images\flowers\tulips\White dynasty.jpg" />
     <Content Include="images\flowers_small\roses\Anastacia.jpg" />
     <Content Include="images\flowers_small\roses\Anastacia2.jpg" />
     <Content Include="images\flowers_small\roses\Cabaret.jpg" />
@@ -109,6 +125,19 @@
     <Content Include="images\flowers_small\roses\PurpleCezanne.jpeg" />
     <Content Include="images\flowers_small\roses\PurpleHaze.jpeg" />
     <Content Include="images\flowers_small\roses\PurpleHaze2.JPG" />
+    <Content Include="images\flowers_small\tulips\aafke.jpg" />
+    <Content Include="images\flowers_small\tulips\ad rem.jpg" />
+    <Content Include="images\flowers_small\tulips\barcelona.jpg" />
+    <Content Include="images\flowers_small\tulips\cheers.jpg" />
+    <Content Include="images\flowers_small\tulips\denmark.jpg" />
+    <Content Include="images\flowers_small\tulips\dynasty.jpg" />
+    <Content Include="images\flowers_small\tulips\leen van de mark.jpg" />
+    <Content Include="images\flowers_small\tulips\Match.jpg" />
+    <Content Include="images\flowers_small\tulips\oscar.jpg" />
+    <Content Include="images\flowers_small\tulips\pako.jpg" />
+    <Content Include="images\flowers_small\tulips\Purple Prince.jpg" />
+    <Content Include="images\flowers_small\tulips\Strong gold.jpg" />
+    <Content Include="images\flowers_small\tulips\White dynasty.jpg" />
     <Content Include="images\loader.gif" />
     <Content Include="images\orchids_bg.jpg" />
     <Content Include="images\pattern.png" />
@@ -122,6 +151,7 @@
     <Content Include="js\jquery.tinyscrollbar.min.js" />
     <Content Include="js\lodash.js" />
     <Content Include="js\require.js" />
+    <Content Include="OrdersMailService.svc" />
     <Content Include="require-config.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -132,7 +162,15 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IOrdersMailService.cs" />
+    <Compile Include="OrdersMailService.svc.cs">
+      <DependentUpon>OrdersMailService.svc</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="images\flowers\orchids\" />
+    <Folder Include="images\flowers_small\orchids\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />

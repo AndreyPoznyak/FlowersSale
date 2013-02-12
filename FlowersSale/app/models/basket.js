@@ -64,6 +64,30 @@
 									totalPrice: totalPrice
 							});
 							model.get("ordersCollection").add(newOrder);
+					},
+
+					sendOrder: function () {
+							var model = this,
+							def = new $.Deferred();
+							$.ajax({
+									type: 'POST',
+									url: "/OrdersMailService.svc/SendMail",
+									async: true,
+									data: "olalala",
+									dataType: 'text',
+									success: function (response) {
+											if (response == "success") {
+													def.resolve();
+											} else {
+													def.reject();
+											}
+									},
+									error: function () {
+											def.reject();
+									}
+							});
+							model.get("ordersCollection").reset();
+							return def.promise();
 					}
 			});
 			return BaksetModel;

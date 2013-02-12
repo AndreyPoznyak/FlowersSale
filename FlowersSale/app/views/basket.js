@@ -12,7 +12,7 @@
 
 					events: {
 							"click .ac_close_black": "close",
-							"click .basket-checkout-button": "close"               //temp
+							"click .basket-checkout-button": "onCheckoutClick"               //temp
 					},
 
 					initialize: function () {
@@ -57,8 +57,16 @@
 							view.$el.html(view.template.html());
 					},
 
+					onCheckoutClick: function () {
+							var view = this;
+							view.model.sendOrder().done(function () {
+									console.log("ordered successfully");
+							}).fail(function () {
+									console.log("order denied");
+							});
+					},
+
 					close: function () {
-							//this.$el.find( ".basket-long-content" ).tinyscrollbar();
 							this.model.set("opened", false);
 					}
 			});
