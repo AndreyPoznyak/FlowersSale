@@ -64,6 +64,7 @@
 							}).fail(function () {
 									console.log("order denied");
 							});
+							view.close();
 					},
 
 					close: function () {

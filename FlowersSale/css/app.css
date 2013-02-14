@@ -67,6 +67,11 @@
 	cursor: pointer;
 }
 
+.flowers-list li:hover
+{
+	color: Yellow;
+}
+
 span.ac_close_black
 {
 	float: right;
