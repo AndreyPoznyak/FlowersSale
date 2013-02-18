@@ -42,6 +42,16 @@
 				}
 		});
 
+		$(document).keyup(function (e) {
+				if (e.keyCode == 27) {
+						if (previewModel.get("opened")) {
+								previewView.close();
+						} else if (userBasketModel.get("opened")) {
+								userBasketView.close();
+						}
+				}
+		});
+
 		//filling menus for flowers item calling
 		//roses
 		var $rosesList = $(".roses").children(".ac_subitem").children(".flowers-list");

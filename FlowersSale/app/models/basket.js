@@ -73,12 +73,13 @@
 									type: 'POST',
 									url: "/OrdersMailService.svc/SendMail",
 									async: true,
-									data: "olalala",
+									data: model.getOrderData(),
 									dataType: 'text',
 									success: function (response) {
 											if (response == "success") {
 													def.resolve();
 											} else {
+													console.log(response);
 													def.reject();
 											}
 									},
@@ -88,6 +89,19 @@
 							});
 							model.get("ordersCollection").reset();
 							return def.promise();
+					},
+
+					getOrderData: function () {
+							var model = this,
+								flowers = model.get("ordersCollection"),
+								dataToSend = "";
+
+							flowers.each(function (flower) {
+									dataToSend += flower.get("type") + " " + flower.get("name") + " " +
+									flower.get("quantity") + " " + flower.get("color") + "    ";
+							});
+
+							return dataToSend;
 					}
 			});
 			return BaksetModel;

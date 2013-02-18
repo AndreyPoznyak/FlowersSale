@@ -15,19 +15,19 @@
 ],
 
 		tulips: [
-{ "name": "Aafke", "price": "12 000", "length": [40,45], "color": ["розовый"], "description": "средний по высоте" },
-{ "name": "Ad rem", "price": "12 000", "length": [60,70], "color": ["красный"], "description": "высокий цветок - длинный стебель, красно-лиловый с узкой желтой каймой." },
-{ "name": "Barcelona", "price": "12 000", "length": [40,60], "color": ["лиловый"], "description": "средний по высоте" },
-{ "name": "Cheers", "price": "12 000", "length": [40,60], "color": ["кремовый"], "description": "средний по высоте, долго держит форму" },
-{ "name": "Denmark", "price": "12 000", "length": [40,60], "color": ["вишневый"], "description": "средний по высоте, с желтой каймой, очень популярный в России цветок" },
-{ "name": "Dynasty", "price": "12 000", "length": [60,70], "color": ["малиновый"], "description": "к низу переходит в белый, высокий цветок" },
-{ "name": "Leen van de mark", "price": "12 000", "length": [40,60], "color": ["красный"], "description": "средний по высоте" },
-{ "name": "Match", "price": "12 000", "length": [40,60], "color": ["желто-розовый"], "description": "темно-розовый сверху, кремово-желтый снизу, средний по высоте: оригинальный и необычный цветок" },
-{ "name": "Oscar", "price": "12 000", "length": [40,60], "color": ["красный"], "description": "средний по высоте, тюльпан №1 на рынке" },
-{ "name": "Pako", "price": "12 000", "length": [40,60], "color": ["оранжевый"], "description": "средний по высоте, тюльпан очень долго не вянет" },
-{ "name": "Purple Prince", "price": "12 000", "length": [30,40], "color": ["сиреневый"], "description": "цветок небольшой высоты" },
-{ "name": "Strong gold", "price": "12 000", "length": [40,60], "color": ["желтый"], "description": "средний по высоте, цветок очень долго не вянет и держит форму" },
-{ "name": "White dynasty", "price": "12 000", "length": [40,60], "color": ["белый"], "description": "средний по высоте" }
+{ "name": "Aafke", "price": "12 000", "length": ['40-45'], "color": ["розовый"], "description": "средний по высоте" },
+{ "name": "Ad rem", "price": "12 000", "length": ['60-70'], "color": ["красный"], "description": "высокий цветок - длинный стебель, красно-лиловый с узкой желтой каймой." },
+{ "name": "Barcelona", "price": "12 000", "length": ['40-60'], "color": ["лиловый"], "description": "средний по высоте" },
+{ "name": "Cheers", "price": "12 000", "length": ['40-60'], "color": ["кремовый"], "description": "средний по высоте, долго держит форму" },
+{ "name": "Denmark", "price": "12 000", "length": ['40-60'], "color": ["вишневый"], "description": "средний по высоте, с желтой каймой, очень популярный в России цветок" },
+{ "name": "Dynasty", "price": "12 000", "length": ['60-70'], "color": ["малиновый"], "description": "к низу переходит в белый, высокий цветок" },
+{ "name": "Leen van de mark", "price": "12 000", "length": ['40-60'], "color": ["красный"], "description": "средний по высоте" },
+{ "name": "Match", "price": "12 000", "length": ['40-60'], "color": ["желто-розовый"], "description": "темно-розовый сверху, кремово-желтый снизу, средний по высоте: оригинальный и необычный цветок" },
+{ "name": "Oscar", "price": "12 000", "length": ['40-60'], "color": ["красный"], "description": "средний по высоте, тюльпан №1 на рынке" },
+{ "name": "Pako", "price": "12 000", "length": ['40-60'], "color": ["оранжевый"], "description": "средний по высоте, тюльпан очень долго не вянет" },
+{ "name": "Purple Prince", "price": "12 000", "length": ['30-40'], "color": ["сиреневый"], "description": "цветок небольшой высоты" },
+{ "name": "Strong gold", "price": "12 000", "length": ['40-60'], "color": ["желтый"], "description": "средний по высоте, цветок очень долго не вянет и держит форму" },
+{ "name": "White dynasty", "price": "12 000", "length": ['40-60'], "color": ["белый"], "description": "средний по высоте" }
 ],
 
 		orchids: [

@@ -211,6 +211,28 @@ span.ac_close_black:hover
 	margin-right: 3px;
 }
 
+.flower-preview-navigation-buttons div
+{
+	float: left;
+	height: 25px;
+	width: 140px;
+	margin-left: 3px;
+	background: #E1E1E1;
+	background: -moz-linear-gradient(top,#EEE 0%,#CCC 100%);
+	background: -webkit-gradient(linear,left top,left bottom,color-stop(0%,#EEE),color-stop(100%,#CCC));
+	background: -webkit-linear-gradient(top,#EEE 0%,#CCC 100%);
+	background: -o-linear-gradient(top,#EEE 0%,#CCC 100%);
+	background: -ms-linear-gradient(top,#EEE 0%,#CCC 100%);
+	background: linear-gradient(top,#EEE 0%,#CCC 100%);
+	border: 1px solid;
+	border-color: #E3E3E3 #C9C9C9 #A5A5A5;
+	color: #494949!important;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+	cursor: pointer;
+}
+
 /* #endregion flower-preview*/
 
 /* #region basket*/
@@ -444,7 +466,7 @@ span.ac_close_black:hover
 	text-transform: none;
 }
 
-.order-added-to-basket
+.operation-result-pop-up
 {
 	display: none;
 	position: relative;
@@ -465,6 +487,26 @@ span.ac_close_black:hover
 	margin-left: 20px;
 	font-size: 19px;
 	text-transform: none;
+}
+
+.basket-order-completed span
+{
+	position: absolute;
+	display: block;
+	color: #FFF;
+	margin-top: 5px;
+	margin-left: 20px;
+	font-size: 19px;
+	text-transform: none;
+}
+
+.basket-loading-icon
+{
+	background: black url(../images/loader.gif) no-repeat center center;
+	width: 50px;
+	height: 50px;
+	margin-top: 3px;
+	margin-left: 70px;
 }
 
 .tech-info

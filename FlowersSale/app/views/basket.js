@@ -58,13 +58,16 @@
 					},
 
 					onCheckoutClick: function () {
-							var view = this;
+							var view = this,
+								$box = view.$el.find(".basket-order-completed").show();
 							view.model.sendOrder().done(function () {
+									//$box.children("span").removeClass("basket-loading-icon").text("Заказ зарегестрирован успешно.");
 									console.log("ordered successfully");
 							}).fail(function () {
+									$box.children("span").removeClass("basket-loading-icon").text("Заказ зарегестрирован неуспешно.");
 									console.log("order denied");
 							});
-							view.close();
+							//view.close();
 					},
 
 					close: function () {
