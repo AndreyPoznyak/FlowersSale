@@ -31,6 +31,40 @@
 	padding-top: 3px;
 }
 
+.navigation-buttons
+{
+	display: none;
+	position: relative;
+	cursor: pointer;
+	width: 50px;
+	height: 100px;
+	margin-top: 200px;
+	opacity: 0.5;
+	z-index: 1000;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.navigation-buttons:hover
+{
+	opacity: 1;
+}
+
+.left-arrow
+{
+	float: left;
+	margin-left: 50px;
+	background-image: url("../images/left-arrow.png");
+}
+
+.right-arrow
+{
+	float: right;
+	margin-left: auto;
+	margin-right: 50px;
+	background-image: url("../images/right-arrow.png");
+}
+
 /* #region flower-preview*/
 
 .flower-preview-content
@@ -210,29 +244,7 @@ span.ac_close_black:hover
 	color: #000;
 	margin-right: 3px;
 }
-/*
-.flower-preview-navigation-buttons div
-{
-	float: left;
-	height: 25px;
-	width: 140px;
-	margin-left: 3px;
-	background: #E1E1E1;
-	background: -moz-linear-gradient(top,#EEE 0%,#CCC 100%);
-	background: -webkit-gradient(linear,left top,left bottom,color-stop(0%,#EEE),color-stop(100%,#CCC));
-	background: -webkit-linear-gradient(top,#EEE 0%,#CCC 100%);
-	background: -o-linear-gradient(top,#EEE 0%,#CCC 100%);
-	background: -ms-linear-gradient(top,#EEE 0%,#CCC 100%);
-	background: linear-gradient(top,#EEE 0%,#CCC 100%);
-	border: 1px solid;
-	border-color: #E3E3E3 #C9C9C9 #A5A5A5;
-	color: #494949!important;
-	-moz-border-radius: 2px;
-	-webkit-border-radius: 2px;
-	border-radius: 2px;
-	cursor: pointer;
-}
-*/
+
 /* #endregion flower-preview*/
 
 /* #region basket*/
@@ -507,6 +519,41 @@ span.ac_close_black:hover
 	height: 50px;
 	margin-top: 3px;
 	margin-left: 70px;
+}
+
+.basket-user-info
+{
+	display: none;
+	position: absolute;
+	bottom: 40px;
+	left: 50px;
+	height: 100px;
+	width: 240px;
+	padding: 5px 10px 5px 10px;
+	z-index: 1000;
+	background-color: #DADADA;
+}
+
+.basket-user-info span
+{
+	width: 100%;
+}
+
+.basket-user-info input
+{
+	width: 100%;
+}
+
+.basket-user-info::after
+{
+	content: ' ';
+	position: absolute;
+	top: 100px;
+	left: 10px;
+	height: 0px;
+	width: 0px;
+	border: 20px solid transparent;
+	border-top-color: #DADADA;
 }
 
 /* #endregion basket*/

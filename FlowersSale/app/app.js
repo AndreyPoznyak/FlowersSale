@@ -55,28 +55,15 @@
 						} else if (userBasketModel.get("opened")) {
 								userBasketView.close();
 						}
-				} else if (e.keyCode == 37) {  //left
-						if (previewModel.get("opened")) {
-								var currentIndex = flowersNames[previewModel.get("flowerType")].indexOf(previewModel.get("flowerName"));
-								if (currentIndex > 0) {
-										previewModel.set({
-												flowerName: Flowers[previewModel.get("flowerType")][currentIndex - 1].name,
-												flowerInfo: Flowers[previewModel.get("flowerType")][currentIndex - 1]
-										});
-								}
-						}
-				} else if (e.keyCode == 39) {  //right
-						if (previewModel.get("opened")) {
-								var currentIndex = flowersNames[previewModel.get("flowerType")].indexOf(previewModel.get("flowerName"));
-								if (currentIndex < flowersNames[previewModel.get("flowerType")].length - 1) {
-										previewModel.set({
-												flowerName: Flowers[previewModel.get("flowerType")][currentIndex + 1].name,
-												flowerInfo: Flowers[previewModel.get("flowerType")][currentIndex + 1]
-										});
-								}
-						}
+				} else if (e.keyCode == 37 && previewModel.get("opened")) {  //left
+						scrollPreviewLeft();
+				} else if (e.keyCode == 39 && previewModel.get("opened")) {  //right
+						scrollPreviewRight();
 				}
 		});
+
+		$(".left-arrow").click(scrollPreviewLeft);
+		$(".right-arrow").click(scrollPreviewRight);
 
 		//filling menus for flowers item calling
 		//roses
@@ -112,19 +99,39 @@
 				}));
 		});
 		//orchids
-//		var $orchidsList = $(".orchids").children(".ac_subitem").children(".flowers-list");
-//		_.each(Flowers.orchids, function (rose) {
-//				$orchidsList.append($("<li></li>", {
-//						text: rose.name
-//				})/*.bind({
-//						click: function (event) {
-//								previewModel.set({
-//										flowerName: rose.name,
-//										flowerInfo: rose,
-//										flowerType: $(event.currentTarget).parent().parent().parent().attr("class"),
-//										opened: true
-//								});
-//						}
-//				})*/);
-//		});
+		//		var $orchidsList = $(".orchids").children(".ac_subitem").children(".flowers-list");
+		//		_.each(Flowers.orchids, function (rose) {
+		//				$orchidsList.append($("<li></li>", {
+		//						text: rose.name
+		//				})/*.bind({
+		//						click: function (event) {
+		//								previewModel.set({
+		//										flowerName: rose.name,
+		//										flowerInfo: rose,
+		//										flowerType: $(event.currentTarget).parent().parent().parent().attr("class"),
+		//										opened: true
+		//								});
+		//						}
+		//				})*/);
+		//		});
+
+		function scrollPreviewLeft() {
+				var currentIndex = flowersNames[previewModel.get("flowerType")].indexOf(previewModel.get("flowerName"));
+				if (currentIndex > 0) {
+						previewModel.set({
+								flowerName: Flowers[previewModel.get("flowerType")][currentIndex - 1].name,
+								flowerInfo: Flowers[previewModel.get("flowerType")][currentIndex - 1]
+						});
+				}
+		};
+
+		function scrollPreviewRight() {
+				var currentIndex = flowersNames[previewModel.get("flowerType")].indexOf(previewModel.get("flowerName"));
+				if (currentIndex < flowersNames[previewModel.get("flowerType")].length - 1) {
+						previewModel.set({
+								flowerName: Flowers[previewModel.get("flowerType")][currentIndex + 1].name,
+								flowerInfo: Flowers[previewModel.get("flowerType")][currentIndex + 1]
+						});
+				}
+		};
 });

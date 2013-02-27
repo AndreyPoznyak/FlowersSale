@@ -15,9 +15,11 @@
 									if (opened === true) {
 											view.$el.fadeIn();
 											$(".dark-mask").fadeIn();
+											$(".navigation-buttons").fadeIn();
 									} else {
 											view.$el.fadeOut();
 											$(".dark-mask").fadeOut();
+											$(".navigation-buttons").fadeOut();
 									}
 							});
 

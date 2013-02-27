@@ -16,7 +16,7 @@ namespace FlowersSale
 		{
 				public void SendMail()
 				{
-						string data = HttpContext.Current.Request.Form.ToString();
+						string data = HttpUtility.UrlDecode(HttpContext.Current.Request.Form.ToString());
 						string response = "success";
 						try
 						{
@@ -25,13 +25,13 @@ namespace FlowersSale
 
 								// Set the to and from addresses.
 								// The from address must be your GMail account
-								mail.From = new MailAddress("andpoznyak@gmail.com");
-								mail.To.Add(new MailAddress("andwer97@mail.ru"));
+								mail.From = new MailAddress("leonid.druyan@gmail.com");
+								mail.To.Add(new MailAddress("leonid.druyan@gmail.com"));
 
 								// Define the message
-								mail.Subject = "flowers testing";
+								mail.Subject = "LEPESTKI.BY: New order";
 								mail.IsBodyHtml = true;
-								mail.Body = data;
+								mail.Body = data.Replace("|", "<br />");
 
 								// Create a new Smpt Client using Google's servers
 								var mailclient = new SmtpClient();
@@ -43,8 +43,8 @@ namespace FlowersSale
 
 								// Specify your authentication details
 								mailclient.Credentials = new System.Net.NetworkCredential(
-																								 "",
-																								 "");
+																								 "leonid.druyan@gmail.com",
+																								 "AWARD_SW");
 								mailclient.Send(mail);
 						}
 						catch (Exception ex)

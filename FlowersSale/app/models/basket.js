@@ -66,14 +66,14 @@
 							model.get("ordersCollection").add(newOrder);
 					},
 
-					sendOrder: function () {
+					sendOrder: function (name, phone) {
 							var model = this,
 							def = new $.Deferred();
 							$.ajax({
 									type: 'POST',
 									url: "/OrdersMailService.svc/SendMail",
 									async: true,
-									data: model.getOrderData(),
+									data: model.getOrderData(name, phone),
 									dataType: 'text',
 									success: function (response) {
 											if (response == "success") {
@@ -91,17 +91,17 @@
 							return def.promise();
 					},
 
-					getOrderData: function () {
+					getOrderData: function (name, phone) {
 							var model = this,
 								flowers = model.get("ordersCollection"),
-								dataToSend = "";
+								dataToSend = name + " " + phone + "||";
 
 							flowers.each(function (flower) {
-									dataToSend += flower.get("type") + " " + flower.get("name") + " " +
-									flower.get("quantity") + " " + flower.get("color") + "    ";
+									dataToSend += flower.get("type") + " - " + flower.get("name") + " - " +
+									flower.get("quantity") + " * " + flower.get("price") + "|";
 							});
 
-							return dataToSend;
+							return encodeURI(dataToSend);
 					}
 			});
 			return BaksetModel;
