@@ -210,7 +210,7 @@ span.ac_close_black:hover
 	color: #000;
 	margin-right: 3px;
 }
-
+/*
 .flower-preview-navigation-buttons div
 {
 	float: left;
@@ -232,7 +232,7 @@ span.ac_close_black:hover
 	border-radius: 2px;
 	cursor: pointer;
 }
-
+*/
 /* #endregion flower-preview*/
 
 /* #region basket*/
@@ -509,9 +509,9 @@ span.ac_close_black:hover
 	margin-left: 70px;
 }
 
+/* #endregion basket*/
+/*
 .tech-info
 {
 	margin: 10px;
-}
-
-/* #endregion basket*/
+}*/

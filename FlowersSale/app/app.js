@@ -10,6 +10,12 @@
 		"flowersList"
 ], function (Backbone, BasketModel, PreviewModel, BasketView, PreviewView) {
 
+		var flowersNames = {};
+
+		flowersNames["roses"] = _.pluck(Flowers.roses, "name");
+		flowersNames["tulips"] = _.pluck(Flowers.tulips, "name");
+		flowersNames["orchids"] = _.pluck(Flowers.orchids, "name");
+
 		var userBasketModel = new BasketModel,
 				userBasketView = new BasketView({
 						model: userBasketModel,
@@ -25,8 +31,8 @@
 		previewModel.on("addItemToBasket", function (info) {
 				userBasketModel.addOrder($.extend(info, {
 						name: previewModel.get("flowerName"),
-						type: previewModel.get("flowerType"),
-						price: previewModel.get("flowerInfo").price
+						type: previewModel.get("flowerType")
+						//price: previewModel.get("flowerInfo").price
 				}));
 		});
 
@@ -43,11 +49,31 @@
 		});
 
 		$(document).keyup(function (e) {
-				if (e.keyCode == 27) {
+				if (e.keyCode == 27) {    //esc
 						if (previewModel.get("opened")) {
 								previewView.close();
 						} else if (userBasketModel.get("opened")) {
 								userBasketView.close();
+						}
+				} else if (e.keyCode == 37) {  //left
+						if (previewModel.get("opened")) {
+								var currentIndex = flowersNames[previewModel.get("flowerType")].indexOf(previewModel.get("flowerName"));
+								if (currentIndex > 0) {
+										previewModel.set({
+												flowerName: Flowers[previewModel.get("flowerType")][currentIndex - 1].name,
+												flowerInfo: Flowers[previewModel.get("flowerType")][currentIndex - 1]
+										});
+								}
+						}
+				} else if (e.keyCode == 39) {  //right
+						if (previewModel.get("opened")) {
+								var currentIndex = flowersNames[previewModel.get("flowerType")].indexOf(previewModel.get("flowerName"));
+								if (currentIndex < flowersNames[previewModel.get("flowerType")].length - 1) {
+										previewModel.set({
+												flowerName: Flowers[previewModel.get("flowerType")][currentIndex + 1].name,
+												flowerInfo: Flowers[previewModel.get("flowerType")][currentIndex + 1]
+										});
+								}
 						}
 				}
 		});
@@ -86,19 +112,19 @@
 				}));
 		});
 		//orchids
-		var $orchidsList = $(".orchids").children(".ac_subitem").children(".flowers-list");
-		_.each(Flowers.orchids, function (rose) {
-				$orchidsList.append($("<li></li>", {
-						text: rose.name
-				})/*.bind({
-						click: function (event) {
-								previewModel.set({
-										flowerName: rose.name,
-										flowerInfo: rose,
-										flowerType: $(event.currentTarget).parent().parent().parent().attr("class"),
-										opened: true
-								});
-						}
-				})*/);
-		});
+//		var $orchidsList = $(".orchids").children(".ac_subitem").children(".flowers-list");
+//		_.each(Flowers.orchids, function (rose) {
+//				$orchidsList.append($("<li></li>", {
+//						text: rose.name
+//				})/*.bind({
+//						click: function (event) {
+//								previewModel.set({
+//										flowerName: rose.name,
+//										flowerInfo: rose,
+//										flowerType: $(event.currentTarget).parent().parent().parent().attr("class"),
+//										opened: true
+//								});
+//						}
+//				})*/);
+//		});
 });

@@ -4,7 +4,8 @@
 					template: $("#flower-preview-template"),
 					events: {
 							"click .ac_close_black": "close",
-							"click .flower-preview-add-to-basket-button": "addToBasketClicked"
+							"click .flower-preview-add-to-basket-button": "addToBasketClicked",
+							"change .flower-preview-length-select": "onChangeLength"
 					},
 
 					initialize: function () {
@@ -32,11 +33,6 @@
 									view.$el.find(".flower-preview-image").css({
 											"background-image": "url(../images/flowers/" + view.model.get("flowerType") + "/" + newName.replace(/\s+/g, '') + ".jpg)"
 									});
-									if (!info.price) {
-											view.$el.find(".flower-preview-price").text("Ждем 01.03.2013");
-									} else {
-											view.$el.find(".flower-preview-price").text(info.price);
-									}
 
 									var $colorSelect = view.$el.find(".flower-preview-color-select").empty(),
 										$lengthSelect = view.$el.find(".flower-preview-length-select").empty();
@@ -62,12 +58,14 @@
 											$colorSelect.removeAttr("disabled");
 									}
 
-									if (info["length"].length === 1) {
+									if (info["length"].length === 1) {                                //price and legth are dependent
 											$lengthSelect.attr({
 													disabled: "disabled"
 											});
+											view.$el.find(".flower-preview-price").text(info.price);
 									} else {
 											$lengthSelect.removeAttr("disabled");
+											view.$el.find(".flower-preview-price").text(info.price[0]);
 									}
 
 									if (info.description) {
@@ -120,7 +118,8 @@
 							view.model.trigger("addItemToBasket", {
 									quantity: view.$el.find(".flower-preview-quantity-select").val(),
 									color: view.$el.find(".flower-preview-color-select").val(),
-									length: view.$el.find(".flower-preview-length-select").val()
+									length: view.$el.find(".flower-preview-length-select").val(),
+									price: view.$el.find(".flower-preview-price").text()
 							});
 							$(".order-added-to-basket").show().fadeOut({
 									duration: 1500,
@@ -128,6 +127,13 @@
 											view.close();
 									}
 							});
+					},
+
+					onChangeLength: function (event) {
+							var view = this,
+									info = view.model.get("flowerInfo");
+
+							view.$el.find(".flower-preview-price").text(info.price[event.currentTarget.selectedIndex]);
 					},
 
 					close: function () {
