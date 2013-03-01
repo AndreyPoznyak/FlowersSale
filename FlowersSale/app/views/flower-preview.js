@@ -124,10 +124,7 @@
 									price: view.$el.find(".flower-preview-price").text()
 							});
 							$(".order-added-to-basket").show().fadeOut({
-									duration: 1500,
-									complete: function () {
-											view.close();
-									}
+									duration: 1500
 							});
 					},
 

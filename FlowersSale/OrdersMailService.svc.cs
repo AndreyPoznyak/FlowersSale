@@ -7,6 +7,7 @@ using System.ServiceModel.Activation;
 using System.ServiceModel.Web;
 using System.Text;
 using System.Web;
+using System.Net;
 using System.Net.Mail;
 
 namespace FlowersSale
@@ -16,36 +17,16 @@ namespace FlowersSale
 		{
 				public void SendMail()
 				{
-						string data = HttpUtility.UrlDecode(HttpContext.Current.Request.Form.ToString());
+						string data = HttpContext.Current.Request.Form.ToString();//HttpUtility.UrlDecode(HttpContext.Current.Request.Form.ToString());
 						string response = "success";
 						try
 						{
-								// Create a new message
-								var mail = new MailMessage();
-
-								// Set the to and from addresses.
-								// The from address must be your GMail account
-								mail.From = new MailAddress("leonid.druyan@gmail.com");
-								mail.To.Add(new MailAddress("leonid.druyan@gmail.com"));
-
-								// Define the message
-								mail.Subject = "LEPESTKI.BY: New order";
-								mail.IsBodyHtml = true;
-								mail.Body = data.Replace("|", "<br />");
-
-								// Create a new Smpt Client using Google's servers
-								var mailclient = new SmtpClient();
-								mailclient.Host = "smtp.gmail.com";
-								mailclient.Port = 587;
-
-								// This is the critical part, you must enable SSL
-								mailclient.EnableSsl = true;
-
-								// Specify your authentication details
-								mailclient.Credentials = new System.Net.NetworkCredential(
-																								 "leonid.druyan@gmail.com",
-																								 "AWARD_SW");
-								mailclient.Send(mail);
+								var client = new SmtpClient("smtp.gmail.com", 587)
+								{
+										Credentials = new NetworkCredential("leonid.druyan@gmail.com", "AWARD_SW"),
+										EnableSsl = true
+								};
+								client.Send("leonid.druyan@gmail.com", "leonid.druyan@gmail.com", "LEPESTKI.BY: New order", data);
 						}
 						catch (Exception ex)
 						{

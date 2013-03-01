@@ -68,12 +68,13 @@
 
 					sendOrder: function (name, phone) {
 							var model = this,
-							def = new $.Deferred();
+							def = new $.Deferred(),
+							data = model.getOrderData(name, phone);
 							$.ajax({
 									type: 'POST',
 									url: "/OrdersMailService.svc/SendMail",
 									async: true,
-									data: model.getOrderData(name, phone),
+									data: data,
 									dataType: 'text',
 									success: function (response) {
 											if (response == "success") {
@@ -101,7 +102,7 @@
 									flower.get("quantity") + " * " + flower.get("price") + "|";
 							});
 
-							return encodeURI(dataToSend);
+							return dataToSend; //encodeURI(dataToSend);
 					}
 			});
 			return BaksetModel;
