@@ -5,6 +5,7 @@ using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
 using System.ServiceModel.Web;
+using System.IO;
 
 namespace FlowersSale
 {
@@ -13,6 +14,6 @@ namespace FlowersSale
 		{
 				[OperationContract]
 				[WebInvoke(Method = "POST")]
-				void SendMail();
+				void SendMail(Stream data);
 		}
 }
