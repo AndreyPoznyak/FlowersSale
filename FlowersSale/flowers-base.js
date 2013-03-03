@@ -42,15 +42,15 @@
 		bouquetes: [
 		"aafke.jpg",
 		"cheers.jpg",
-		"cheers+whitedynasty.jpg",
+		"cheerswhitedynasty.jpg",
 		"denmark.jpg",
 		"mix.jpg",
 		"mix1.jpg",
 		"oscar.jpg",
 		"purpleprince.jpg",
 		"stronggold.jpg",
-		"stronggold+oscar+whitedynasty.jpg",
-		"whitedynasty+purpleflage+aafke.jpg",
+		"stronggoldoscarwhitedynasty.jpg",
+		"whitedynastypurpleflageaafke.jpg",
 		"whitedynasty.jpg"
 ]
 
