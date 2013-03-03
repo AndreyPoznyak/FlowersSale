@@ -37,6 +37,21 @@
 { "name": "Phalaenopsis Brussels", "price": "", "color": ["бело-розовый"], "description": "" },
 { "name": "Phalaenopsis Leningrad", "price": "", "color": ["сиренево-белый"], "description": "" },
 { "name": "Phalaenopsis Porto", "price": "", "color": ["желто-красный"], "description": "" }
+],
+
+		bouquetes: [
+		"aafke.jpg",
+		"cheers.jpg",
+		"cheers+whitedynasty.jpg",
+		"denmark.jpg",
+		"mix.jpg",
+		"mix1.jpg",
+		"oscar.jpg",
+		"purpleprince.jpg",
+		"stronggold.jpg",
+		"stronggold+oscar+whitedynasty.jpg",
+		"whitedynasty+purpleflage+aafke.jpg",
+		"whitedynasty.jpg"
 ]
 
 };

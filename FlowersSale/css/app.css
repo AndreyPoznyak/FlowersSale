@@ -558,8 +558,28 @@ span.ac_close_black:hover
 }
 
 /* #endregion basket*/
-/*
-.tech-info
+
+.bouquetes-content
 {
-	margin: 10px;
-}*/
+	display: none;
+	position: relative;
+	width: 689px;
+	margin-top: 80px;
+	margin-left: auto;
+	margin-right: auto;
+	z-index: 1000;
+	overflow: hidden;
+	background-color: white;
+	text-transform: none;
+}
+
+.bouquetes-content table
+{
+	float: right;
+	margin-top: 10px;
+}
+
+.bouquet-item img
+{
+	height: 140px;
+}

@@ -6,9 +6,10 @@
 
 		"app/views/basket",
 		"app/views/flower-preview",
+		"app/views/bouquetes-table",
 
 		"flowersList"
-], function (Backbone, BasketModel, PreviewModel, BasketView, PreviewView) {
+], function (Backbone, BasketModel, PreviewModel, BasketView, PreviewView, BouquetesTableView) {
 
 		var flowersNames = {};
 
@@ -27,6 +28,10 @@
 						model: previewModel,
 						el: $(".flower-preview-content")
 				});
+
+		var baouquetesTable = new BouquetesTableView({
+				el: $(".bouquetes-content")
+		});
 
 		previewModel.on("addItemToBasket", function (info) {
 				userBasketModel.addOrder($.extend(info, {
@@ -84,6 +89,13 @@
 		});
 		//tulips
 		var $tulipsList = $(".tulips").children(".ac_subitem").children(".flowers-list");
+		$tulipsList.append($("<li></li>", {
+				text: "Посмотреть варианты букетов"
+		}).bind({
+				click: function () {
+						baouquetesTable.open();
+				}
+		}));
 		_.each(Flowers.tulips, function (rose) {
 				$tulipsList.append($("<li></li>", {
 						text: rose.name
