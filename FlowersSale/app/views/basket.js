@@ -1,13 +1,10 @@
 ﻿define([
 		"backbone",
-		"app/views/basket-item"//,
-//"js/jquery.tinyscrollbar.min"
+		"app/views/basket-item",
+		"text!app/templates/basket.htm"
 ],
-	function (Backbone, BasketItemView) {
+	function (Backbone, BasketItemView, template) {
 			var BasketView = Backbone.View.extend({
-
-					template: $("#basket-template"),
-
 					basketItemsById: {},
 					userInfoWasEntered: false,
 					userInfoIsValid: false,
@@ -56,7 +53,7 @@
 
 					render: function () {
 							var view = this;
-							view.$el.html(view.template.html());
+							view.$el.html(template);
 							//_.bindAll(view, view.checkInfo);
 					},
 

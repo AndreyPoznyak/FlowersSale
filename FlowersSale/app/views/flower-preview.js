@@ -1,7 +1,9 @@
-﻿define(["backbone"],
-	function (Backbone) {
+﻿define([
+		"backbone",
+		"text!app/templates/flower-preview.htm"
+],
+	function (Backbone, template) {
 			var FlowerPreviewView = Backbone.View.extend({
-					template: $("#flower-preview-template"),
 					events: {
 							"click .ac_close_black": "close",
 							"click .flower-preview-add-to-basket-button": "addToBasketClicked",
@@ -102,7 +104,7 @@
 
 					render: function () {
 							var view = this;
-							view.$el.html(view.template.html());
+							view.$el.html(template);
 
 							var $quantitySelect = view.$el.find(".flower-preview-quantity-select").empty();
 

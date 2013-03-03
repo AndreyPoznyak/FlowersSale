@@ -1,11 +1,9 @@
 ﻿define([
-		"backbone"
+		"backbone",
+		"text!app/templates/basket-item.htm"
 ],
-	function (Backbone) {
+	function (Backbone, template) {
 			var BasketItemView = Backbone.View.extend({
-
-					template: $("#basket-item-template"),
-
 					events: {
 							"click .basket-item-remove-label": "onRemoveItemClick"
 					},
@@ -18,7 +16,7 @@
 					render: function () {
 							var view = this,
 									model = view.model;
-							view.$el.html(view.template.html());
+							view.$el.html(template);
 							view.$el.find(".basket-item-title").text(model.get("name"));
 							view.$el.find(".basket-item-small-image").css({
 									"background-image": "url(../images/flowers_small/" + model.get("type") + "/" + model.get("name").replace(/\s+/g, '') + ".jpg)"

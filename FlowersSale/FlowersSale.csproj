@@ -55,9 +55,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="app\app.js" />
+    <Content Include="app\templates\basket-item.htm" />
+    <Content Include="app\templates\basket.htm" />
     <Content Include="app\models\flower-order-item.js" />
     <Content Include="app\models\flower-preview.js" />
     <Content Include="app\models\basket.js" />
+    <Content Include="app\templates\flower-preview.htm" />
     <Content Include="app\views\basket-item.js" />
     <Content Include="app\views\basket.js" />
     <Content Include="app\views\flower-preview.js" />
@@ -148,9 +151,9 @@
     <Content Include="js\base.js" />
     <Content Include="js\jquery-1.8.0.js" />
     <Content Include="js\jquery.easing.1.3.js" />
-    <Content Include="js\jquery.tinyscrollbar.min.js" />
     <Content Include="js\lodash.js" />
     <Content Include="js\require.js" />
+    <Content Include="js\require.text.js" />
     <Content Include="OrdersMailService.svc" />
     <Content Include="require-config.js" />
     <Content Include="Web.config" />

@@ -9,6 +9,7 @@
 				jquery: "js/jquery-1.8.0",
 				lodash: "js/lodash",
 				backbone: "js/backbone",
+				text: "js/require.text",
 
 				flowersList: "flowers-base"
 		},
