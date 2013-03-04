@@ -583,3 +583,19 @@ span.ac_close_black:hover
 {
 	height: 140px;
 }
+
+.developer-info
+{
+	position: fixed;
+	right: 1px;
+	bottom: 1px;
+	cursor: pointer;
+	text-decoration: none;
+	text-transform: none;
+	color: #201E1E;
+}
+
+.developer-info:hover
+{
+	text-decoration: underline;
+}
