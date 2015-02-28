@@ -36,10 +36,12 @@
 					},
 
 					close: function () {
+							$(".dark-mask").fadeOut();
 							this.$el.fadeOut();
 					},
 
 					open: function () {
+							$(".dark-mask").fadeIn();
 							this.$el.fadeIn();
 					}
 			});

@@ -30,8 +30,14 @@
 
 									if (view.model.get("flowerType") === "roses") {
 											view.$el.height(410);
+
+										view.$el.find(".changing-button").removeClass().addClass("not-available changing-button").find("span").html("Нет в наличии");
+
 									} else {
 											view.$el.height(500);
+
+										view.$el.find(".changing-button").addClass("flower-preview-add-to-basket-button orange-button").removeClass("not-available").find("span").html("Добавить в корзину");
+
 									}
 									view.$el.find(".flower-preview-title").text(newName);
 									view.$el.find(".flower-preview-image").css({

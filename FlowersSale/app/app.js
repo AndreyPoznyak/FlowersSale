@@ -7,15 +7,16 @@
 		"app/views/basket",
 		"app/views/flower-preview",
 		"app/views/bouquetes-table",
+		"app/views/general-info",
 
 		"flowersList"
-], function (Backbone, BasketModel, PreviewModel, BasketView, PreviewView, BouquetesTableView) {
+], function (Backbone, BasketModel, PreviewModel, BasketView, PreviewView, BouquetesTableView, GeneralInfoView) {
 
 		var flowersNames = {};
 
 		flowersNames["roses"] = _.pluck(Flowers.roses, "name");
 		flowersNames["tulips"] = _.pluck(Flowers.tulips, "name");
-		flowersNames["orchids"] = _.pluck(Flowers.orchids, "name");
+		//flowersNames["orchids"] = _.pluck(Flowers.orchids, "name");
 
 		var userBasketModel = new BasketModel,
 				userBasketView = new BasketView({
@@ -32,6 +33,10 @@
 		var baouquetesTable = new BouquetesTableView({
 				el: $(".bouquetes-content")
 		});
+
+    var generalInfo = new GeneralInfoView({
+        el: $(".general-info-content")
+    });
 
 		previewModel.on("addItemToBasket", function (info) {
 				userBasketModel.addOrder($.extend(info, {
@@ -146,4 +151,26 @@
 						});
 				}
 		};
+
+	//bind analytics
+
+	$(".tulips").click(function () {
+		ga = ga || function () {};
+		ga('send', 'event', 'tulips_click');
+	});
+
+	$(".roses").click(function () {
+		ga = ga || function () {};
+		ga('send', 'event', 'roses_click');
+	});
+
+	$(".information").click(function () {
+		ga = ga || function () {};
+		ga('send', 'event', 'info_click');
+	});
+
+
+           setTimeout(function () {
+               generalInfo.open();
+           }, 1500);
 });

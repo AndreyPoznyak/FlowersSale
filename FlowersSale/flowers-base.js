@@ -15,29 +15,29 @@
 ],
 
 		tulips: [
-{ "name": "Aafke", "price": "12000", "length": ['40-45'], "lifeSpan": "15-20", "petals": "9", "color": ["розовый"], "description": "Cредний по высоте." },
-{ "name": "Ad rem", "price": "12000", "length": ['60-70'], "lifeSpan": "15-20", "petals": "9", "color": ["красный"], "description": "Высокий цветок с длинным стеблем, красно-лиловый с узкой желтой каймой." },
-{ "name": "Barcelona", "price": "12000", "length": ['40-60'], "lifeSpan": "15-20", "petals": "9", "color": ["лиловый"], "description": "Средний по высоте." },
-{ "name": "Cheers", "price": "12000", "length": ['40-60'], "lifeSpan": "15-20", "petals": "9", "color": ["кремовый"], "description": "Средний по высоте, долго держит форму" },
-{ "name": "Denmark", "price": "12000", "length": ['40-60'], "lifeSpan": "15-20", "petals": "9", "color": ["вишневый"], "description": "Средний по высоте, с желтой каймой, очень популярный в России цветок" },
-{ "name": "Dynasty", "price": "12000", "length": ['60-70'], "lifeSpan": "15-20", "petals": "9", "color": ["малиновый"], "description": "К низу переходит в белый, высокий цветок" },
-{ "name": "Leen van de mark", "price": "12000", "length": ['40-60'], "lifeSpan": "15-20", "petals": "9", "color": ["красный"], "description": "Средний по высоте" },
-{ "name": "Match", "price": "12000", "length": ['40-60'], "lifeSpan": "15-20", "petals": "9", "color": ["желто-розовый"], "description": "Темно-розовый сверху, кремово-желтый снизу, средний по высоте: оригинальный и необычный цветок" },
-{ "name": "Oscar", "price": "12000", "length": ['40-60'], "lifeSpan": "15-20", "petals": "9", "color": ["красный"], "description": "Средний по высоте, тюльпан №1 на рынке" },
-{ "name": "Pako", "price": "12000", "length": ['40-60'], "lifeSpan": "15-20", "petals": "9", "color": ["оранжевый"], "description": "Средний по высоте, тюльпан очень долго не вянет" },
-{ "name": "Purple Prince", "price": "12000", "length": ['30-40'], "lifeSpan": "15-20", "petals": "9", "color": ["сиреневый"], "description": "Цветок небольшой высоты" },
-{ "name": "Strong gold", "price": "12000", "length": ['40-60'], "lifeSpan": "15-20", "petals": "9", "color": ["желтый"], "description": "Средний по высоте, цветок очень долго не вянет и держит форму" },
-{ "name": "White dynasty", "price": "12000", "length": ['40-60'], "lifeSpan": "15-20", "petals": "9", "color": ["белый"], "description": "Средний по высоте" }
+{ "name": "Aafke", "price": "16000", "length": ['40-45'], "lifeSpan": "15-20", "petals": "9", "color": ["розовый"], "description": "Cредний по высоте." },
+{ "name": "Ad rem", "price": "16000", "length": ['60-70'], "lifeSpan": "15-20", "petals": "9", "color": ["красный"], "description": "Высокий цветок с длинным стеблем, красно-лиловый с узкой желтой каймой." },
+{ "name": "Barcelona", "price": "16000", "length": ['40-60'], "lifeSpan": "15-20", "petals": "9", "color": ["лиловый"], "description": "Средний по высоте." },
+{ "name": "Cheers", "price": "16000", "length": ['40-60'], "lifeSpan": "15-20", "petals": "9", "color": ["кремовый"], "description": "Средний по высоте, долго держит форму" },
+{ "name": "Denmark", "price": "16000", "length": ['40-60'], "lifeSpan": "15-20", "petals": "9", "color": ["вишневый"], "description": "Средний по высоте, с желтой каймой, очень популярный в России цветок" },
+{ "name": "Dynasty", "price": "16000", "length": ['60-70'], "lifeSpan": "15-20", "petals": "9", "color": ["малиновый"], "description": "К низу переходит в белый, высокий цветок" },
+{ "name": "Leen van de mark", "price": "16000", "length": ['40-60'], "lifeSpan": "15-20", "petals": "9", "color": ["красный"], "description": "Средний по высоте" },
+{ "name": "Match", "price": "16000", "length": ['40-60'], "lifeSpan": "15-20", "petals": "9", "color": ["желто-розовый"], "description": "Темно-розовый сверху, кремово-желтый снизу, средний по высоте: оригинальный и необычный цветок" },
+{ "name": "Oscar", "price": "16000", "length": ['40-60'], "lifeSpan": "15-20", "petals": "9", "color": ["красный"], "description": "Средний по высоте, тюльпан №1 на рынке" },
+{ "name": "Pako", "price": "16000", "length": ['40-60'], "lifeSpan": "15-20", "petals": "9", "color": ["оранжевый"], "description": "Средний по высоте, тюльпан очень долго не вянет" },
+{ "name": "Purple Prince", "price": "16000", "length": ['30-40'], "lifeSpan": "15-20", "petals": "9", "color": ["сиреневый"], "description": "Цветок небольшой высоты" },
+{ "name": "Strong gold", "price": "16000", "length": ['40-60'], "lifeSpan": "15-20", "petals": "9", "color": ["желтый"], "description": "Средний по высоте, цветок очень долго не вянет и держит форму" },
+{ "name": "White dynasty", "price": "16000", "length": ['40-60'], "lifeSpan": "15-20", "petals": "9", "color": ["белый"], "description": "Средний по высоте" }
 ],
 
-		orchids: [
-{ "name": "Phalaenopsis Adelaide", "price": "", "color": ["белый"], "description": "" },
-{ "name": "Phalaenopsis Bordeaux", "price": "", "color": ["лиловый"], "description": "" },
-{ "name": "Phalaenopsis Boston", "price": "", "color": ["нежно-розовый"], "description": "" },
-{ "name": "Phalaenopsis Brussels", "price": "", "color": ["бело-розовый"], "description": "" },
-{ "name": "Phalaenopsis Leningrad", "price": "", "color": ["сиренево-белый"], "description": "" },
-{ "name": "Phalaenopsis Porto", "price": "", "color": ["желто-красный"], "description": "" }
-],
+//		orchids: [
+//{ "name": "Phalaenopsis Adelaide", "price": "", "color": ["белый"], "description": "" },
+//{ "name": "Phalaenopsis Bordeaux", "price": "", "color": ["лиловый"], "description": "" },
+//{ "name": "Phalaenopsis Boston", "price": "", "color": ["нежно-розовый"], "description": "" },
+//{ "name": "Phalaenopsis Brussels", "price": "", "color": ["бело-розовый"], "description": "" },
+//{ "name": "Phalaenopsis Leningrad", "price": "", "color": ["сиренево-белый"], "description": "" },
+//{ "name": "Phalaenopsis Porto", "price": "", "color": ["желто-красный"], "description": "" }
+//],
 
 		bouquetes: [
 		"aafke.jpg",

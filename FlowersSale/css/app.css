@@ -31,6 +31,15 @@
 	padding-top: 3px;
 }
 
+.not-available {
+	color: black;
+	float: left;
+	width: 180px;
+	height: 25px;
+	margin-left: 20px;
+	margin-top: 5px;
+}
+
 .navigation-buttons
 {
 	display: none;
@@ -559,7 +568,7 @@ span.ac_close_black:hover
 
 /* #endregion basket*/
 
-.bouquetes-content
+.bouquetes-content, .general-info-content
 {
 	display: none;
 	position: relative;
@@ -582,6 +591,26 @@ span.ac_close_black:hover
 .bouquet-item img
 {
 	height: 140px;
+}
+
+.general-info-content {
+    margin-top: 60px;
+}
+
+.info-banner {
+    height: 330px;
+    margin: 25px auto 0 auto;
+    display: block;
+}
+
+.info-text-block {
+    padding: 0 20px 0 20px;
+}
+
+.ac_subitem p {
+    text-transform: none;
+    padding: 0 10px 0 20px;
+    text-indent: 20px;
 }
 
 .developer-info
