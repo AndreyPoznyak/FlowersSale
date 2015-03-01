@@ -113,9 +113,14 @@
 
 					        /* user clicks one item : appetizers | main course | desserts | wines | specials */
 					        $el_title.bind('click.Menu', function (e) {
-					            $.when(toggleMenuItems('down')).done(function () {
-					                openSubMenu($item, $sub_menu, el_image);
-					            });
+								if (!$(e.currentTarget).parent().hasClass("coupon")) {                    //attention
+
+									$.when(toggleMenuItems('down')).done(function () {
+										openSubMenu($item, $sub_menu, el_image);
+									});
+
+								}
+
 					            return false;
 					        });
 					        /* closes the submenu */
@@ -126,14 +131,14 @@
 					    });
 					},
 					openSubMenu = function ($item, $sub_menu, el_image) {
-					    $sub_menu.stop()
-						.animate({
-						    height: '500px',
-						    marginTop: '-200px'
-						}, 400, function () {
-						    //the bg image changes
-						    showItemImage(el_image);
-						});
+							$sub_menu.stop()
+								.animate({
+									height: '500px',
+									marginTop: '-200px'
+								}, 400, function () {
+									//the bg image changes
+									showItemImage(el_image);
+								});
 					},
         /* changes the background image */
 					showItemImage = function (source) {

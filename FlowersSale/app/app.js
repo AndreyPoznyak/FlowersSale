@@ -8,9 +8,10 @@
 		"app/views/flower-preview",
 		"app/views/bouquetes-table",
 		"app/views/general-info",
+		"app/views/user-form",
 
 		"flowersList"
-], function (Backbone, BasketModel, PreviewModel, BasketView, PreviewView, BouquetesTableView, GeneralInfoView) {
+], function (Backbone, BasketModel, PreviewModel, BasketView, PreviewView, BouquetesTableView, GeneralInfoView, UserView) {
 
 		var flowersNames = {};
 
@@ -37,6 +38,10 @@
     var generalInfo = new GeneralInfoView({
         el: $(".general-info-content")
     });
+
+	var userForm = new UserView({
+		el: $(".user-form")
+	});
 
 		previewModel.on("addItemToBasket", function (info) {
 				userBasketModel.addOrder($.extend(info, {
@@ -115,22 +120,6 @@
 						}
 				}));
 		});
-		//orchids
-		//		var $orchidsList = $(".orchids").children(".ac_subitem").children(".flowers-list");
-		//		_.each(Flowers.orchids, function (rose) {
-		//				$orchidsList.append($("<li></li>", {
-		//						text: rose.name
-		//				})/*.bind({
-		//						click: function (event) {
-		//								previewModel.set({
-		//										flowerName: rose.name,
-		//										flowerInfo: rose,
-		//										flowerType: $(event.currentTarget).parent().parent().parent().attr("class"),
-		//										opened: true
-		//								});
-		//						}
-		//				})*/);
-		//		});
 
 		function scrollPreviewLeft() {
 				var currentIndex = flowersNames[previewModel.get("flowerType")].indexOf(previewModel.get("flowerName"));
@@ -154,23 +143,26 @@
 
 	//bind analytics
 
-	$(".tulips").click(function () {
+	$(".tulips").children("a").click(function () {
 		ga = ga || function () {};
-		ga('send', 'event', 'tulips_click');
+		ga('send', 'event', 'navigation', 'click', 'tulips', 1);
 	});
 
-	$(".roses").click(function () {
+	$(".roses").children("a").click(function () {
 		ga = ga || function () {};
-		ga('send', 'event', 'roses_click');
+		ga('send', 'event', 'navigation', 'click', 'roses', 1);
 	});
 
-	$(".information").click(function () {
+	$(".information").children("a").click(function () {
 		ga = ga || function () {};
-		ga('send', 'event', 'info_click');
+		ga('send', 'event', 'navigation', 'click', 'info', 1);
 	});
 
+	$(".coupon").children("a").click(function (event) {
+		userForm.open();
+	});
 
            setTimeout(function () {
                generalInfo.open();
-           }, 1500);
+           }, 2000);
 });
