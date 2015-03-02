@@ -20,19 +20,16 @@ define([
 
                 if (!name || !mail) {
                     valid = false
-                } else if (name.length < 3) {
+                } else if (name.length < 3 || mail.length < 4) {
                     valid = false
-                } else if (mail.indexOf("@") < 0) {
+                } else if (mail.indexOf("@") < 0 || mail.indexOf(".") < 0) {
                     valid = false
                 }
 
                 if (valid) {
                     ga = ga || function () {};
 
-                    ga('send', 'event', 'banner', 'download', {
-                        name: name,
-                        email: mail
-                    });
+                    ga('send', 'event', 'banner', 'download', mail + " (" + name + ")", 1);
                 }
 
                 return valid;

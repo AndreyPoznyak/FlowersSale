@@ -35,12 +35,13 @@
 				el: $(".bouquetes-content")
 		});
 
-    var generalInfo = new GeneralInfoView({
-        el: $(".general-info-content")
-    });
-
 	var userForm = new UserView({
 		el: $(".user-form")
+	});
+
+	var generalInfo = new GeneralInfoView({
+		el: $(".general-info-content"),
+		userForm: userForm
 	});
 
 		previewModel.on("addItemToBasket", function (info) {
